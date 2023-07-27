@@ -43,7 +43,7 @@ class _MainViewState extends State<MainView> {
       title: _getSearchBar(),
       actions: const [
         Padding(
-          padding: EdgeInsets.all(AppPaddingManager.p10),
+          padding: EdgeInsets.all(AppSizeManager.s10),
           child: Icon(IconManager.bell),
         ),
       ],

@@ -7,4 +7,6 @@ class ImageAssetManager {
   static const String serviceIcon = '$imagePath/service_icon.jpg';
   static const String carAccessories = '$imagePath/car_accessories.jpg';
   static const String circleAvatar = '$imagePath/circle_avatar.jpg';
+  static const String yourCarBanner = '$imagePath/your_car_banner.jpg';
+  static const String yourCarCard = '$imagePath/your_car_card.jpg';
 }

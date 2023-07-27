@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:corewave_app_task/presentation/resources/assets_manager.dart';
 import 'package:corewave_app_task/presentation/resources/colors_manager.dart';
 import 'package:corewave_app_task/presentation/resources/icons_manager.dart';
+import 'package:corewave_app_task/presentation/resources/routes_manager.dart';
 import 'package:corewave_app_task/presentation/resources/strings_manager.dart';
 import 'package:corewave_app_task/presentation/resources/values_manager.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           ),
           _getWeekdaysList(StringManager.dailyServiceAcvtivity),
           _getSpacing(AppSizeManager.s20),
-          _getMainBanner(),
+          _getMainBanner(), //* DIRECTS TO SECOND PAGE - YOUR CARD DETAILS
           _getSpacing(AppSizeManager.s20),
           _getAddYourCarText(),
           _getAddYourCar(),
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage> {
 
   _getTextSection(String basicText, String gradientText) {
     return Padding(
-      padding: const EdgeInsets.all(AppPaddingManager.p10),
+      padding: const EdgeInsets.all(AppSizeManager.s10),
       child: Row(
         children: [
           RichText(
@@ -94,9 +95,9 @@ class _HomePageState extends State<HomePage> {
 
   _getWeekdaysList(Map title) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppPaddingManager.p10),
+      padding: const EdgeInsets.symmetric(horizontal: AppSizeManager.s8),
       child: SizedBox(
-        height: AppSizeManager.s60,
+        height: AppSizeManager.s70,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: _weekdays.length,
@@ -126,9 +127,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   _getMainBanner() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppPaddingManager.p10),
-      child: _getRoundedBanner(ImageAssetManager.mainBanner),
+    return InkWell(
+      onTap: () => Navigator.pushNamed(context, RouteManager.yourCarDetails),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSizeManager.s10),
+        child: _getRoundedBanner(ImageAssetManager.mainBanner),
+      ),
     );
   }
 
@@ -152,7 +156,7 @@ class _HomePageState extends State<HomePage> {
 
   _getAddYourCar() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppPaddingManager.p10),
+      padding: const EdgeInsets.symmetric(horizontal: AppSizeManager.s10),
       child: SizedBox(
         height: AppSizeManager.s140,
         child: Row(
@@ -166,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                 color: ColorManager.lightGrey,
               ),
               child: Padding(
-                padding: const EdgeInsets.all(AppPaddingManager.p10),
+                padding: const EdgeInsets.all(AppSizeManager.s10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -222,7 +226,7 @@ class _HomePageState extends State<HomePage> {
 
   _getChooseTheRightService() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppPaddingManager.p10),
+      padding: const EdgeInsets.symmetric(horizontal: AppSizeManager.s10),
       child: Wrap(
         spacing: AppSizeManager.s4,
         runSpacing: AppSizeManager.s4,
@@ -262,7 +266,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(AppPaddingManager.p10),
+        padding: const EdgeInsets.all(AppSizeManager.s10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -299,7 +303,7 @@ class _HomePageState extends State<HomePage> {
 
   _getRecommendedCarAccesories() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppPaddingManager.p10),
+      padding: const EdgeInsets.symmetric(horizontal: AppSizeManager.s10),
       child: SizedBox(
         height: AppSizeManager.s180,
         child: ListView(
@@ -329,7 +333,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(AppPaddingManager.p10),
+        padding: const EdgeInsets.all(AppSizeManager.s10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -409,7 +413,7 @@ class _HomePageState extends State<HomePage> {
 
   _getSeeAllText() {
     return Padding(
-      padding: const EdgeInsets.all(AppPaddingManager.p10),
+      padding: const EdgeInsets.all(AppSizeManager.s10),
       child: InkWell(
         child: Text(
           StringManager.seeAll,

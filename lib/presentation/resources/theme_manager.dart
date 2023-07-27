@@ -60,11 +60,33 @@ ThemeData appThemeManager() {
     // text theme
     textTheme: TextTheme(
       titleLarge: boldTextStyleManager(
-          color: ColorManager.black, fontSize: FontSizeManager.s20),
+        color: ColorManager.black,
+        fontSize: FontSizeManager.s20,
+      ),
       titleMedium: mediumTextStyleManager(
-          color: ColorManager.black, fontSize: FontSizeManager.s18),
+        color: ColorManager.black,
+        fontSize: FontSizeManager.s18,
+      ),
       titleSmall: mediumTextStyleManager(
-          color: ColorManager.black, fontSize: FontSizeManager.s14),
+        color: ColorManager.black,
+        fontSize: FontSizeManager.s14,
+      ),
+      bodyLarge: boldTextStyleManager(
+        color: ColorManager.black,
+        fontSize: FontSizeManager.s24,
+      ),
+      bodyMedium: mediumTextStyleManager(
+        color: ColorManager.black,
+        fontSize: FontSizeManager.s16,
+      ),
+      bodySmall: regularTextStyleManager(
+        color: ColorManager.darkGrey,
+        fontSize: FontSizeManager.s16,
+      ),
+      displayMedium: mediumTextStyleManager(
+        color: ColorManager.white,
+        fontSize: FontSizeManager.s16,
+      ),
       labelSmall: semiBoldUnderlinedTextStyleManager(
         color: ColorManager.primaryYellow,
         fontSize: AppSizeManager.s14,

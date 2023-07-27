@@ -19,6 +19,15 @@ class StringManager {
   static const String customerProfile = 'Lead Designer';
 
   static const String yourCarDetails = 'Your Car Details';
+  static const String yourCarName = 'Nissan GT-R';
+  static const String yourTypeCar = 'Type Car';
+  static const String yourCarColor = 'Color';
+  static const String yourCarSteering = 'Steering';
+  static const String yourCarFuelType = 'Fuel Type';
+  static const String insuranceExpiryDate = 'Expiry Date';
+  static const String insuranceCompanyName = 'Insurance Company';
+
+  static const String continueText = 'Continue';
 
   static const Map<String,String> dailyServiceAcvtivity = {
     'basicText': 'Daily',

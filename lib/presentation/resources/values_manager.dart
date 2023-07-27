@@ -1,13 +1,8 @@
-class AppPaddingManager {
-  static const double p10 = 10.0;
-  static const double p15 = 15.0;
-  static const double p20 = 20.0;
-}
-
 class AppSizeManager {
   static const double s0 = 0;
   static const double s1 = 1;
   static const double s4 = 4;
+  static const double s8 = 8;
   static const double s10 = 10;
   static const double s14 = 14;
   static const double s15 = 15;
@@ -22,6 +17,7 @@ class AppSizeManager {
   static const double s80 = 80;
   static const double s90 =90;
   static const double s100 = 100;
+  static const double s120 = 120;
   static const double s140 = 140;
   static const double s160 = 160;
   static const double s180 = 180;
