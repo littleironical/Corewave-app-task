@@ -70,6 +70,8 @@ flutter:
     - assets/images/circle_avatar.jpg
     - assets/images/your_car_banner.jpg
     - assets/images/your_car_card.jpg
+    - assets/screenshots/screenshot1.png
+    - assets/screenshots/screenshot2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
